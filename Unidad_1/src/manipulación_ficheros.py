@@ -47,7 +47,7 @@
     }
    ],
    "source": [
-    "with open('../../data/Cap1/subvenciones.csv', encoding='latin1') as fichero_csv:\n",
+    "with open('subvenciones.csv', encoding='latin1') as fichero_csv:\n",
     "    lector = csv.reader(fichero_csv)\n",
     "    next(lector, None)  # Se salta la cabecera\n",
     "    importe_total = 0\n",
@@ -81,7 +81,7 @@
     }
    ],
    "source": [
-    "with open('../../data/Cap1/subvenciones.csv', encoding='latin1') as fichero_csv:\n",
+    "with open('subvenciones.csv', encoding='latin1') as fichero_csv:\n",
     "    lector = csv.reader(fichero_csv)\n",
     "    next(lector, None)\n",
     "    asociaciones = {}\n",
@@ -116,7 +116,7 @@
     }
    ],
    "source": [
-    "with open('../../data/Cap1/subvenciones.csv', encoding='latin1') as fichero_csv:\n",
+    "with open('subvenciones.csv', encoding='latin1') as fichero_csv:\n",
     "    dict_lector = csv.DictReader(fichero_csv)\n",
     "    asociaciones = {}\n",
     "    for linea in dict_lector:\n",
@@ -142,7 +142,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "with open('../../data/Cap1/subvenciones.csv', encoding='latin1') as fich_lect, open('../../data/Cap1/subvenciones_esc.csv', 'w', encoding='latin1') as fich_escr:\n",
+    "with open('subvenciones.csv', encoding='latin1') as fich_lect, open('../../data/Cap1/subvenciones_esc.csv', 'w', encoding='latin1') as fich_escr:\n",
     "    dict_lector = csv.DictReader(fich_lect)\n",
     "    campos = dict_lector.fieldnames + ['Justificación requerida', 'Justificación recibida']\n",
     "    escritor = csv.DictWriter(fich_escr, fieldnames=campos)\n",
@@ -176,7 +176,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "with open('../../data/Cap1/subvenciones.csv', encoding='latin1') as fich_lect, open('../../data/Cap1/subvenciones.tsv', 'w', encoding='latin1') as fich_escr:\n",
+    "with open('subvenciones.csv', encoding='latin1') as fich_lect, open('../../data/Cap1/subvenciones.tsv', 'w', encoding='latin1') as fich_escr:\n",
     "    dict_lector = csv.DictReader(fich_lect)\n",
     "    campos = dict_lector.fieldnames\n",
     "    escritor = csv.DictWriter(fich_escr, delimiter='\\t', fieldnames=campos)\n",
@@ -206,7 +206,7 @@
     }
    ],
    "source": [
-    "with open('../../data/Cap1/subvenciones.tsv', encoding='latin1') as fichero:\n",
+    "with open('subvenciones.tsv', encoding='latin1') as fichero:\n",
     "    dict_lector = csv.DictReader(fichero, delimiter='\\t')\n",
     "    asociaciones = {}\n",
     "    for linea in dict_lector:\n",
@@ -263,7 +263,7 @@
     }
    ],
    "source": [
-    "with open('../../data/Cap1/subvenciones.json') as fich:\n",
+    "with open('subvenciones.json') as fich:\n",
     "    datos = json.load(fich)\n",
     "    print(datos[0:2])"
    ]
@@ -289,7 +289,7 @@
     }
    ],
    "source": [
-    "with open('../../data/Cap1/subvenciones.json', encoding='utf-8') as fich_lect, open('../../data/Cap1/subvenciones_agrupadas.json', 'w', encoding='utf-8') as fich_escr:\n",
+    "with open('subvenciones.json', encoding='utf-8') as fich_lect, open('../../data/Cap1/subvenciones_agrupadas.json', 'w', encoding='utf-8') as fich_escr:\n",
     "    data = json.load(fich_lect)\n",
     "    asoc_str = \"Asociación\"\n",
     "    act_str = \"Actividad Subvencionada\"\n",
@@ -338,7 +338,7 @@
     }
    ],
    "source": [
-    "with open('../../data/Cap1/subvenciones.json', encoding='utf-8') as fich_lect, open('../../data/Cap1/subvenciones_agrupadas_error.json', 'w', encoding='utf-8') as fich_escr:\n",
+    "with open('subvenciones.json', encoding='utf-8') as fich_lect, open('../../data/Cap1/subvenciones_agrupadas_error.json', 'w', encoding='utf-8') as fich_escr:\n",
     "    data = json.load(fich_lect)\n",
     "    asoc_str = \"Asociación\"\n",
     "    act_str = \"Actividad Subvencionada\"\n",
@@ -379,7 +379,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "with open('../../data/Cap1/subvenciones.csv', encoding='latin1') as fich_lect, open('../../data/Cap1/subvenciones_agrupadas_con_gasto.json', 'w', encoding='utf-8') as fich_escr:\n",
+    "with open('subvenciones.csv', encoding='latin1') as fich_lect, open('../../data/Cap1/subvenciones_agrupadas_con_gasto.json', 'w', encoding='utf-8') as fich_escr:\n",
     "    dict_lector = csv.DictReader(fich_lect)\n",
     "    asoc_str = \"Asociación\"\n",
     "    act_str = \"Actividad Subvencionada \"\n",
@@ -451,7 +451,7 @@
     }
    ],
    "source": [
-    "with open_workbook('../../data/Cap1/subvenciones.xls',on_demand=True) as libro:\n",
+    "with open_workbook('subvenciones.xls',on_demand=True) as libro:\n",
     "    asociaciones = {}\n",
     "    for nombre in libro.sheet_names():\n",
     "        hoja = libro.sheet_by_name(nombre)\n",
@@ -481,7 +481,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "with open_workbook('../../data/Cap1/subvenciones.xls',on_demand=True) as libro_lect:\n",
+    "with open_workbook('subvenciones.xls',on_demand=True) as libro_lect:\n",
     "    asociaciones = {}\n",
     "    libro_escr = xlwt.Workbook()\n",
     "    for nombre in libro_lect.sheet_names():\n",
@@ -546,7 +546,7 @@
    "outputs": [],
    "source": [
     "import pandas\n",
-    "with pandas.ExcelFile('../../data/Cap1/subvenciones.xls') as xl:\n",
+    "with pandas.ExcelFile('subvenciones.xls') as xl:\n",
     "    writer = pandas.ExcelWriter('../../data/Cap1/subvenciones_df.xls')\n",
     "    for nombre in xl.sheet_names:\n",
     "        df = xl.parse(nombre)\n",
@@ -604,7 +604,7 @@
     }
    ],
    "source": [
-    "arbol = ET.parse('../../data/Cap1/subvenciones.xml')\n",
+    "arbol = ET.parse('subvenciones.xml')\n",
     "raiz = arbol.getroot()\n",
     "asociaciones = {}\n",
     "for fila in raiz:\n",
@@ -631,7 +631,7 @@
     }
    ],
    "source": [
-    "arbol = ET.parse('../../data/Cap1/subvenciones.xml')\n",
+    "arbol = ET.parse('subvenciones.xml')\n",
     "asociaciones = {}\n",
     "for fila in arbol.findall('Row'): # raiz.iter('Row'):\n",
     "    centro = fila.find('Asociaci_n').text\n",
@@ -656,7 +656,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "arbol = ET.parse('../../data/Cap1/subvenciones.xml')\n",
+    "arbol = ET.parse('subvenciones.xml')\n",
     "raiz = arbol.getroot()\n",
     "nuevo = ET.ElementTree()\n",
     "raiz_nueva = ET.Element(\"Raiz\")\n",
@@ -683,7 +683,7 @@
     "    imp_elem.text = str(imp)\n",
     "    gasto = gasto + imp\n",
     "    asoc_actual = asoc\n",
-    "nuevo.write('../../data/Cap1/subvenciones_lista_total.xml')"
+    "nuevo.write('subvenciones_lista_total.xml')"
    ]
   },
   {
