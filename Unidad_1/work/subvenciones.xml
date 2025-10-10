@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Subvenciones>
+  <Asociacion nombre="AMPA ANTONIO MACHADO">
+    <Actividad>
+      <Nombre>TALLER FIESTA DE CARNAVAL</Nombre>
+      <Importe>94.56</Importe>
+      <JustificacionRequerida>No</JustificacionRequerida>
+      <JustificacionRecibida>No</JustificacionRecibida>
+    </Actividad>
+    <Actividad>
+      <Nombre>TALLER DIA DEL PADRE</Nombre>
+      <Importe>39.04</Importe>
+      <JustificacionRequerida>No</JustificacionRequerida>
+      <JustificacionRecibida>No</JustificacionRecibida>
+    </Actividad>
+  </Asociacion>
+</Subvenciones>
